@@ -28,5 +28,11 @@ public class Examen {
         return false;
     }
 
+    //5
+    public boolean isPrincipioPalabra(char[] chars, int index) {
+        if (index >= chars.length || isIndexDelimitor(chars, index))
+            return false;
 
+        return index == 0 || isIndexDelimitor(chars, index - 1);
+    }
 }
