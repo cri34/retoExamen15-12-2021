@@ -1,4 +1,6 @@
 public class Examen {
+    char[] delimitor = stringToCharArray(" -,.!?'");
+
     //2
     public char[] stringToCharArray(String text) {
         char[] chars = new char[text.length()];
@@ -8,12 +10,22 @@ public class Examen {
         }
         return chars;
     }
+
     //3
-    public void printArray(char[] array){
-        for (int i=0; i< array.length;i++){
-            System.out.print(" "+array[i]);
+    public void printArray(char[] array) {
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(" " + array[i]);
         }
         System.out.println();
+    }
+
+    //4
+    public boolean isIndexDelimitor(char[] chars, int index) {
+        for (int i = 0; i < delimitor.length; i++) {
+            if (chars[index] == delimitor[i])
+                return true;
+        }
+        return false;
     }
 
 
