@@ -7,5 +7,6 @@ public class ExamenTest {
        System.out.println(e.isPrincipioPalabra(e.stringToCharArray(frase),58));
        System.out.println(e.returnLenghtWord(e.stringToCharArray(frase),9));
        System.out.println(e.returnWord(e.stringToCharArray(frase),19));
+       System.out.println(e.isPolindroma("juuj"));
     }
 }
