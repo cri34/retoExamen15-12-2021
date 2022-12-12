@@ -39,11 +39,28 @@ public class Examen {
     //6
     public int returnLenghtWord(char [] chars, int index){
         int lenght = 0;
+        if (index < 0 || index >= chars.length)
+            return lenght;
+
         for (int i = index ; i < chars.length; i++){
             if (isIndexDelimitor(chars, i))
                 break;
             lenght++;
         }
      return lenght;
+    }
+    //7
+    public String returnWord(char [] chars, int index){
+         String word="";
+         if ( index >= chars.length || index < 0 || !isPrincipioPalabra(chars,index))
+             return word;
+
+         for (int i = index; i < chars.length; i++){
+             if (isIndexDelimitor(chars,i))
+                 break;
+             word += chars[i];
+         }
+
+         return word;
     }
 }

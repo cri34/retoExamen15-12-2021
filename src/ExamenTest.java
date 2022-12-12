@@ -6,5 +6,6 @@ public class ExamenTest {
        System.out.println( e.isIndexDelimitor(e.stringToCharArray(frase),2));
        System.out.println(e.isPrincipioPalabra(e.stringToCharArray(frase),58));
        System.out.println(e.returnLenghtWord(e.stringToCharArray(frase),9));
+       System.out.println(e.returnWord(e.stringToCharArray(frase),19));
     }
 }
