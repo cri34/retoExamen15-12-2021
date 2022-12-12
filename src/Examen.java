@@ -35,4 +35,15 @@ public class Examen {
 
         return index == 0 || isIndexDelimitor(chars, index - 1);
     }
+
+    //6
+    public int returnLenghtWord(char [] chars, int index){
+        int lenght = 0;
+        for (int i = index ; i < chars.length; i++){
+            if (isIndexDelimitor(chars, i))
+                break;
+            lenght++;
+        }
+     return lenght;
+    }
 }
