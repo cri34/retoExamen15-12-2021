@@ -98,5 +98,9 @@ public int countPalindromas(char[] chars){
         }
         return palindromas;
     }
-
+    public void printArray(String [] array) {
+        for (int i = 0; i < array.length; i++)
+            System.out.print(" " + array[i]);
+        System.out.println();
+    }
 }

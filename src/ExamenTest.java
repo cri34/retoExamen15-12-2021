@@ -10,6 +10,6 @@ public class ExamenTest {
        System.out.println(e.returnWord(e.stringToCharArray(frase),19));
        System.out.println(e.isPolindroma("juuj"));
        System.out.println(e.countPalindromas(e.stringToCharArray(frase)));
-
+       e.printArray(e.returnWordPalindromas(e.stringToCharArray(frase)));
     }
 }
