@@ -63,12 +63,40 @@ public class Examen {
 
          return word;
     }
+    //8
     public boolean isPolindroma(String word){
         for (int i = 0; i < word.length() /2; i++){
             if (word.charAt(i) != word.charAt((word.length()-1)-i))
                 return false;
         }
         return true;
+    }
+    //9
+public int countPalindromas(char[] chars){
+        int contador = 0;
+        String word="";
+        for (int i = 0; i < chars.length;i++){
+           if (!isPrincipioPalabra(chars,i))
+                continue;
+           word = returnWord(chars,i);
+           if (isPolindroma(word))
+                contador++;
+        }
+        return contador;
+}
+    //10
+    public String [] returnWordPalindromas(char [] chars){
+        String [] palindromas= new String[countPalindromas(chars)];
+        String word = "";
+        int indPal=0;
+        for (int i = 0; i < chars.length; i++){
+            if (!isPrincipioPalabra(chars,i))
+                    continue;
+            word = returnWord(chars, i);
+            if (isPolindroma(word))
+                palindromas[indPal++] = word;
+        }
+        return palindromas;
     }
 
 }
