@@ -123,5 +123,19 @@ public int countPalindromas(char[] chars){
         }
         return apSecChars;
     }
+    //13
+    public void printApSecChars(int [][] ApSecChars){
+        final char firstAbc=(char)97;
+        String combL="";
+        final char abcLenght=26;
+        for (int i =0; i < abcLenght;i++){
+            for (int e =0; e < abcLenght; e++){
+                combL = "" + (char)(firstAbc + i)  + "" + (char)(firstAbc + e);
+                System.out.print(" |" + combL + " = " + ApSecChars[i][e]+"|");
+            }
+            System.out.println();
+        }
+    }
+
 
 }
