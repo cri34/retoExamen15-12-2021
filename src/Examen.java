@@ -136,6 +136,29 @@ public int countPalindromas(char[] chars){
             System.out.println();
         }
     }
-
-
+    //14
+    public int returnIndMinLenght(String[] palindromas, int index){
+        int minInd = index;
+        for (int i = index; i < palindromas.length; i++){
+            if (palindromas[i].length() < palindromas[minInd].length()){
+                minInd = i;
+            }
+        }
+        return minInd;
+    }
+    public String[] ordenarArrayStringLenght(String [] palindromas){
+        String [] palOrd=new String [palindromas.length];
+        int minInd;
+        String temp="";
+        for (int i=0; i < palindromas.length ; i++){
+            palOrd[i]=palindromas[i];
+        }
+        for (int i = 0; i< palOrd.length;i++){
+            minInd = returnIndMinLenght(palOrd,i);
+            temp = palOrd[i];
+            palOrd[i]= palOrd[minInd];
+            palOrd[minInd] = temp;
+        }
+        return palOrd;
+    }
 }

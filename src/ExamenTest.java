@@ -12,5 +12,6 @@ public class ExamenTest {
        System.out.println(e.countPalindromas(e.stringToCharArray(frase)));
        e.printArray(e.returnWordPalindromas(e.stringToCharArray(frase)));
        e.printApSecChars(e.aparicionsSecChars(e.stringToCharArray(frase)));
+       e.printArray(e.ordenarArrayStringLenght(e.returnWordPalindromas(e.stringToCharArray(frase))));
     }
 }
