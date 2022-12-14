@@ -161,4 +161,28 @@ public int countPalindromas(char[] chars){
         }
         return palOrd;
     }
+    //15
+    public int  returnIndMaxWordLenght(String[] array){
+        int indMax=0;
+        for (int i=0; i< array.length; i++){
+            if (array[i].length() > array[indMax].length()){
+                indMax = i;
+            }
+        }
+        return indMax;
+    }
+    public void printStringVertical(String[] array){
+        int maxLenght= array[returnIndMaxWordLenght(array)].length();
+        for (int e = 0; e < maxLenght; e++){
+            for (int i = 0; i < array.length;i++){
+                if (array[i].length()-1 < e){
+                    System.out.print("  ");
+                    continue;
+                }
+                System.out.print(" " + array[i].charAt(e) );
+            }
+            System.out.println();
+        }
+        System.out.println();
+    }
 }
