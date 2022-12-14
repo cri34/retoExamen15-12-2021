@@ -98,9 +98,30 @@ public int countPalindromas(char[] chars){
         }
         return palindromas;
     }
+    //11
     public void printArray(String [] array) {
         for (int i = 0; i < array.length; i++)
             System.out.print(" " + array[i]);
         System.out.println();
     }
+//abcde..
+    //12
+    public int [][] aparicionsSecChars(char [] chars) {
+        final int abcLenght=26;
+        char charAbc=(char) 97;
+        int [][] apSecChars = new int[abcLenght][abcLenght];
+        String combL="";
+        for (int f = 0; f < abcLenght ; f++) {
+            for (int s = 0; s < abcLenght ; s++) {
+                for (int indCh = 0; indCh < chars.length-1; indCh++){
+                    combL = "" + (char)(charAbc + f)  + "" + (char)(charAbc + s);
+                    if ((chars[indCh] + "" + chars[indCh+1]).equals(combL)){
+                        apSecChars[f][s] += 1;
+                    }
+                }
+            }
+        }
+        return apSecChars;
+    }
+
 }
